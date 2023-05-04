@@ -1,3 +1,24 @@
-@import "utils/vars";
-@import "utils/mixins";
-@import "utils/extends";
+@mixin onTablet {
+  @media (min-width: 800px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin grid {
+	display: grid;
+	grid-gap: 24px;
+}
+
+@mixin container {
+	display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
