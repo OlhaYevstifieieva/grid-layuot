@@ -1,9 +1,9 @@
 # Grid Task
 
-The web page contains information about the pharmaceutical scandal. You can find detailed information about its essence, and answers to current questions from specialists. The web page is implemented for a 1200px viewing window. There is also an adaptive version for a tablet and a mobile version.
+The web page contains blocks with responsive layout for phone and tablet/desktop versions.
 
 * [DESING](https://www.figma.com/file/ybbwCdLodIWcbsLhPP6h2n/Frontend-test-task?node-id=1-248&t=cHT3pa5Nqj3V3OSf-0)
-* [DEMO LINK](https://olhayevstifieieva.github.io/testTask/)
+* [DEMO LINK](https://olhayevstifieieva.github.io/grid-layuot/)
 
 ## Local development
 ### Tecnologies
