@@ -6,7 +6,6 @@
   margin-bottom: 52px;
   background-color: $background-bottom-block-color;
 
-
   @include onTablet {
     @include grid;
     grid-template-columns: repeat(3, 1fr);
@@ -15,7 +14,10 @@
   }
 }
 
-.blocks-l--19, .blocks-l--21, .blocks-l--22, .blocks-l--23 {
+.blocks-l--19,
+.blocks-l--21,
+.blocks-l--22,
+.blocks-l--23 {
   height: 146px;
 
   &::before {
@@ -52,8 +54,8 @@
 }
 
 .blocks-l--21 {
-    grid-column: 1 / span 1;
-    grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
 }
 
 .blocks-l--22 {

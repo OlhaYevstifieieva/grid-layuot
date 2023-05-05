@@ -31,6 +31,14 @@ body {
 
 .container {
   @include container;
+
+  &:first-child {
+    margin-top: 20px;
+  }
+
+  &:last-child {
+    margin-bottom: 60px;
+  }
 }
 
 .block-item {

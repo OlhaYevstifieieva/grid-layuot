@@ -13,12 +13,12 @@
 }
 
 @mixin grid {
-	display: grid;
-	grid-gap: $grid-gap;
+  display: grid;
+  grid-gap: $grid-gap;
 }
 
 @mixin container {
-	display: flex;
+  display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 1200px;
