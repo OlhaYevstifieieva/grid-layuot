@@ -1,6 +1,26 @@
-@mixin hover($_property, $_toValue) {
-  transition: #{$_property} 0.3s;
-  &:hover {
-    #{$_property}: $_toValue;
+@import "_vars.scss";
+
+@mixin onTablet {
+  @media (min-width: 800px) {
+    @content;
   }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin grid {
+	display: grid;
+	grid-gap: $grid-gap;
+}
+
+@mixin container {
+	display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }

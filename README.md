@@ -13,7 +13,7 @@ The web page contains information about the pharmaceutical scandal. You can find
 
 ### Dependencies
 
-    Node v14.18.2 and higher
+    Node v14
     NPM v6.14.15 and higher
 
 ### Installing

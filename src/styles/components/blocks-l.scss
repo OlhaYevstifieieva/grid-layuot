@@ -1,0 +1,67 @@
+@import "../utils/mixins";
+@import "../utils/vars";
+
+.blocks-l {
+  margin-top: 48px;
+  margin-bottom: 52px;
+  background-color: $background-bottom-block-color;
+
+
+  @include onTablet {
+    @include grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(40px, auto);
+    grid-auto-flow: dense;
+  }
+}
+
+.blocks-l--19, .blocks-l--21, .blocks-l--22, .blocks-l--23 {
+  height: 146px;
+
+  &::before {
+    content: attr(data-text);
+  }
+}
+
+.blocks-l--18 {
+  height: 40px;
+  grid-column: 1 / span 3;
+
+  &::before {
+    content: attr(data-text);
+  }
+}
+
+.blocks-l--19 {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.blocks-l--20 {
+  height: 250px;
+
+  &::before {
+    content: attr(data-text);
+  }
+
+  @include onTablet {
+    height: 100%;
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 2;
+  }
+}
+
+.blocks-l--21 {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+}
+
+.blocks-l--22 {
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.blocks-l--23 {
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 1;
+}

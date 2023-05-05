@@ -1,0 +1,83 @@
+@import "../utils/mixins";
+@import "../utils/vars";
+
+
+
+.blocks-top {
+  background: $background-top-color;
+
+  @include onTablet {
+    @include grid;
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.blocks-top--left, .blocks-top--right {
+  display: flex;
+  flex-direction: column;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+
+    @include onTablet {
+      margin-bottom: 0;
+    }
+  }
+
+  @include onTablet {
+    @include grid;
+  }
+}
+
+.blocks-top--right {
+  @include onTablet {
+    grid-template-columns: subgrid;
+  }
+}
+
+.blocks-top--left--1 {
+  height: 100vh;
+  max-height: 300px;
+
+  @include onTablet {
+    grid-column: span 28;
+  }
+
+  &::before {
+    content: attr(data-text);
+  }
+}
+
+.blocks-top--left--2::before, .blocks-top--left--3::before,
+.blocks-top--left--4::before,
+.blocks-top--left--5::before,
+.blocks-top--right--6::before,
+.blocks-top--right--7::before {
+  content: attr(data-text);
+}
+
+.blocks-top--left--2, .blocks-top--left--4 {
+  height: 150px;
+  @include onTablet {
+    grid-column: span 14;
+    height: 200px;
+  }
+}
+
+.blocks-top--left--3, .blocks-top--left--5 {
+  height: 150px;
+  @include onTablet {
+    grid-column: span 14;
+    height:200px;
+  }
+}
+
+.blocks-top--right--6,
+.blocks-top--right--7 {
+  height: 280px;
+
+  @include onTablet {
+    grid-column: span 24;
+    height: 100%;
+  }
+}

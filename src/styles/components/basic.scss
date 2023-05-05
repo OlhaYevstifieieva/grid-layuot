@@ -1,0 +1,50 @@
+@import "../utils/mixins";
+@import "../utils/vars";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $main-background-color;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+  color: $main-text-color;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  @include container;
+}
+
+.block-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: $block-background-color;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+
+    @include onTablet {
+      margin-bottom: 0;
+    }
+  }
+}
